@@ -1,0 +1,28 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "types",
+    srcs = [
+        "api.go",
+        "env.go",
+        "ftx_book_order.go",
+        "ftx_error.go",
+        "ftx_fill.go",
+        "ftx_order.go",
+        "ftx_order_book_price_type_enum.go",
+        "ftx_order_book_side_enum.go",
+        "ftx_trailing_order.go",
+        "ftx_trigger_order.go",
+        "leverage.go",
+        "main_config.go",
+        "price.go",
+        "sync_map.go",
+    ],
+    importpath = "web_socket/src/types",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//src/clients/pgdb",
+        "@com_github_go_numb_go_ftx//rest/private/fills",
+        "@com_github_go_numb_go_ftx//rest/private/orders",
+    ],
+)

@@ -1,0 +1,24 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "account_manager",
+    srcs = [
+        "account_manager.go",
+        "deps.go",
+        "flags.go",
+        "init.go",
+        "state.go",
+        "workflow.go",
+    ],
+    importpath = "web_socket/src/components/account_manager/v1",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//src/cfg",
+        "//src/components/api_manager",
+        "//src/types",
+        "//src/utils/dbg",
+        "@com_github_go_numb_go_ftx//auth",
+        "@com_github_go_numb_go_ftx//rest",
+        "@com_github_go_numb_go_ftx//rest/private/account",
+    ],
+)

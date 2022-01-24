@@ -1,0 +1,12 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "pgdb",
+    srcs = ["pgdb_client.go"],
+    importpath = "web_socket/src/clients/pgdb",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_go_pg_pg_v10//:pg",
+        "@com_github_go_pg_pg_v10//orm",
+    ],
+)

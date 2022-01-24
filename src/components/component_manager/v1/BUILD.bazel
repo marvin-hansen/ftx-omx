@@ -1,0 +1,24 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "component_manager",
+    srcs = [
+        "component_manager.go",
+        "deps.go",
+        "flags.go",
+        "init.go",
+        "workflow.go",
+    ],
+    importpath = "web_socket/src/components/component_manager/v1",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//src/cfg",
+        "//src/clients/pgdb",
+        "//src/components/account_manager",
+        "//src/components/api_manager",
+        "//src/components/crypto_manager",
+        "//src/components/data_manager",
+        "//src/components/order_manager",
+        "//src/utils/dbg",
+    ],
+)

@@ -1,0 +1,16 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "dbg",
+    srcs = [
+        "dbg.go",
+        "dbg_log.go",
+        "dbg_requests.go",
+        "dbg_response.go",
+        "dbg_structs.go",
+        "dbg_utils.go",
+    ],
+    importpath = "web_socket/src/utils/dbg",
+    visibility = ["//visibility:public"],
+    deps = ["@com_github_go_numb_go_ftx//rest/private/orders"],
+)

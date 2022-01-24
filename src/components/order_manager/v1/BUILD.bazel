@@ -1,0 +1,35 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "order_manager",
+    srcs = [
+        "deps.go",
+        "flags.go",
+        "init.go",
+        "order_manager.go",
+        "state.go",
+        "utils_math.go",
+        "utils_order.go",
+        "utils_price.go",
+        "utils_size.go",
+        "workflow_book_order.go",
+        "workflow_limit_order.go",
+        "workflow_map_reset.go",
+        "workflow_trailing_order.go",
+        "workflow_trigger_order.go",
+    ],
+    importpath = "web_socket/src/components/order_manager/v1",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//src/cfg",
+        "//src/components/account_manager",
+        "//src/components/data_manager",
+        "//src/types",
+        "//src/utils/dbg",
+        "@com_github_go_numb_go_ftx//rest",
+        "@com_github_go_numb_go_ftx//rest/private/account",
+        "@com_github_go_numb_go_ftx//rest/private/orders",
+        "@com_github_go_numb_go_ftx//rest/public/markets",
+        "@com_github_go_numb_go_ftx//types",
+    ],
+)

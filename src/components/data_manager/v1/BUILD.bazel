@@ -1,0 +1,26 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "data_manager",
+    srcs = [
+        "data_manager.go",
+        "deps.go",
+        "flags.go",
+        "init.go",
+        "state.go",
+        "workflow_api.go",
+        "workflow_error.go",
+        "workflow_order.go",
+        "workflow_order_fill.go",
+        "workflow_utils.go",
+    ],
+    importpath = "web_socket/src/components/data_manager/v1",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//src/cfg",
+        "//src/clients/pgdb",
+        "//src/components/crypto_manager",
+        "//src/types",
+        "//src/utils/dbg",
+    ],
+)

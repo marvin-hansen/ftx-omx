@@ -1,0 +1,14 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "order_manager",
+    srcs = ["order_manager.go"],
+    importpath = "web_socket/src/components/order_manager",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//src/components/account_manager",
+        "//src/components/data_manager",
+        "//src/components/order_manager/v1:order_manager",
+        "//src/types",
+    ],
+)

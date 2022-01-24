@@ -1,0 +1,17 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "cfg",
+    srcs = [
+        "crypto_config.go",
+        "db_config.go",
+        "dbg_flags.go",
+        "main_config.go",
+    ],
+    importpath = "web_socket/src/cfg",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//src/clients/pgdb",
+        "//src/types",
+    ],
+)
