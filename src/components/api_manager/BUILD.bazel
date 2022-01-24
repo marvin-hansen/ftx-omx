@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 go_library(
     name = "api_manager",
     srcs = ["api_manager.go"],
-    importpath = "web_socket/src/components/api_manager",
+    importpath = "ftx-omx/src/components/api_manager",
     visibility = ["//visibility:public"],
     deps = [
         "//src/components/api_manager/v1:api_manager",

@@ -3,10 +3,10 @@
 package data_manager
 
 import (
-	"web_socket/src/clients/pgdb"
-	"web_socket/src/components/crypto_manager"
-	v1 "web_socket/src/components/data_manager/v1"
-	"web_socket/src/types"
+	"ftx-omx/src/clients/pgdb"
+	"ftx-omx/src/components/crypto_manager"
+	v1 "ftx-omx/src/components/data_manager/v1"
+	"ftx-omx/src/types"
 )
 
 type DataManager interface {

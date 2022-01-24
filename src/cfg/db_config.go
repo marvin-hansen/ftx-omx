@@ -3,8 +3,8 @@
 package cfg
 
 import (
-	"web_socket/src/clients/pgdb"
-	"web_socket/src/types"
+	"ftx-omx/src/clients/pgdb"
+	"ftx-omx/src/types"
 )
 
 func getDBConfig(e types.Env) (dbConf *pgdb.DBConfig) {

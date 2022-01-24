@@ -2,7 +2,7 @@
 
 package v1
 
-import "web_socket/src/components/api_manager"
+import "ftx-omx/src/components/api_manager"
 
 type Dependencies struct {
 	apiManager api_manager.ApiManager

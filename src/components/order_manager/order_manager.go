@@ -3,10 +3,10 @@
 package order_manager
 
 import (
-	"web_socket/src/components/account_manager"
-	"web_socket/src/components/data_manager"
-	v1 "web_socket/src/components/order_manager/v1"
-	t "web_socket/src/types"
+	"ftx-omx/src/components/account_manager"
+	"ftx-omx/src/components/data_manager"
+	v1 "ftx-omx/src/components/order_manager/v1"
+	t "ftx-omx/src/types"
 )
 
 type OrderManager interface {

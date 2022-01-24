@@ -8,9 +8,9 @@ import (
 	"crypto/rand"
 	"encoding/base64"
 	"encoding/hex"
+	"ftx-omx/src/cfg"
+	"ftx-omx/src/utils/crypto"
 	"io"
-	"web_socket/src/cfg"
-	"web_socket/src/utils/crypto"
 )
 
 // Symmetric AES encryption / decryption

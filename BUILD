@@ -10,7 +10,7 @@ gazelle_binary(
     visibility = ["//visibility:public"],
 )
 
-# gazelle:prefix web_socket/
+# gazelle:prefix ftx-omx/
 gazelle(
     name = "gazelle",
     gazelle = "//:gazelle_binary",
@@ -35,7 +35,7 @@ filegroup(
 go_library(
     name = "lib",
     srcs = ["main.go"],
-    importpath = "web_socket/",
+    importpath = "ftx-omx/",
     deps = [
         "//src/cfg",
         "//src/service",

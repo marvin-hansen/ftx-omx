@@ -1,4 +1,4 @@
-module web_socket
+module ftx-omx
 
 go 1.18
 
@@ -8,6 +8,9 @@ require (
 	github.com/golang/gddo v0.0.0-20210115222349-20d68f94ee1f
 	github.com/soheilhy/cmux v0.1.5
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
+)
+
+require (
 	github.com/andybalholm/brotli v1.0.0 // indirect
 	github.com/buger/jsonparser v1.1.1 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect

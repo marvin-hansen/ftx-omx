@@ -3,12 +3,12 @@
 package v1
 
 import (
-	"web_socket/src/components/account_manager"
-	"web_socket/src/components/api_manager"
-	"web_socket/src/components/crypto_manager"
-	"web_socket/src/components/data_manager"
-	"web_socket/src/components/order_manager"
-	"web_socket/src/utils/dbg"
+	"ftx-omx/src/components/account_manager"
+	"ftx-omx/src/components/api_manager"
+	"ftx-omx/src/components/crypto_manager"
+	"ftx-omx/src/components/data_manager"
+	"ftx-omx/src/components/order_manager"
+	"ftx-omx/src/utils/dbg"
 )
 
 func (c *ComponentManager) init() {

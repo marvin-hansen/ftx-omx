@@ -14,7 +14,7 @@ go_library(
         "workflow_order_fill.go",
         "workflow_utils.go",
     ],
-    importpath = "web_socket/src/components/data_manager/v1",
+    importpath = "ftx-omx/src/components/data_manager/v1",
     visibility = ["//visibility:public"],
     deps = [
         "//src/cfg",

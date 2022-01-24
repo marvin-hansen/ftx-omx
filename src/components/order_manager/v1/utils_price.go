@@ -3,11 +3,11 @@
 package v1
 
 import (
+	t "ftx-omx/src/types"
+	"ftx-omx/src/utils/dbg"
 	"github.com/go-numb/go-ftx/rest"
 	"github.com/go-numb/go-ftx/rest/public/markets"
 	"log"
-	t "web_socket/src/types"
-	"web_socket/src/utils/dbg"
 )
 
 func getPrice(client *rest.Client, productCode string) (price *t.Price, err error) {

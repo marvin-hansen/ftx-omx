@@ -4,9 +4,9 @@ package v1
 // https://docs.ftx.com/#place-trigger-order
 
 import (
+	t "ftx-omx/src/types"
+	dbg2 "ftx-omx/src/utils/dbg"
 	"strconv"
-	t "web_socket/src/types"
-	dbg2 "web_socket/src/utils/dbg"
 )
 
 func (c *OrderManager) PlaceProfitTakerOrder(clientID string, placeOrder *t.PlaceTriggerOrder) (orderID string, ok bool, msg string) {

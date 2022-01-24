@@ -3,8 +3,8 @@
 package v1
 
 import (
+	"ftx-omx/src/types"
 	"log"
-	"web_socket/src/types"
 )
 
 func (c *DataManager) StoreError(error *types.Error) (ok bool, msg string) {

@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 go_library(
     name = "component_manager",
     srcs = ["component_manager.go"],
-    importpath = "web_socket/src/components/component_manager",
+    importpath = "ftx-omx/src/components/component_manager",
     visibility = ["//visibility:public"],
     deps = [
         "//src/clients/pgdb",

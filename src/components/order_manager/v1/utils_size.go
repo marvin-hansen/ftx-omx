@@ -4,10 +4,10 @@ package v1
 
 import (
 	"errors"
+	t "ftx-omx/src/types"
 	"github.com/go-numb/go-ftx/rest"
 	"github.com/go-numb/go-ftx/rest/private/account"
 	"log"
-	t "web_socket/src/types"
 )
 
 type SizeParam struct {

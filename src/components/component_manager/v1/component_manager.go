@@ -2,7 +2,7 @@
 
 package v1
 
-import "web_socket/src/clients/pgdb"
+import "ftx-omx/src/clients/pgdb"
 
 type ComponentManager struct {
 	dependencies *Dependencies

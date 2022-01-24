@@ -4,10 +4,10 @@ package v1
 
 import (
 	"errors"
+	"ftx-omx/src/utils/dbg"
 	"github.com/go-numb/go-ftx/auth"
 	"github.com/go-numb/go-ftx/rest"
 	"github.com/go-numb/go-ftx/rest/private/account"
-	"web_socket/src/utils/dbg"
 )
 
 func (c AccountManager) GetAccount(clientID, ticker string) (client *rest.Client, err error) {

@@ -3,8 +3,8 @@
 package v1
 
 import (
-	"web_socket/src/components/account_manager"
-	"web_socket/src/components/data_manager"
+	"ftx-omx/src/components/account_manager"
+	"ftx-omx/src/components/data_manager"
 )
 
 type OrderManager struct {

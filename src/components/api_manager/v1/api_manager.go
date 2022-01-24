@@ -2,7 +2,7 @@
 
 package v1
 
-import "web_socket/src/components/data_manager"
+import "ftx-omx/src/components/data_manager"
 
 type ApiManager struct {
 	state *State

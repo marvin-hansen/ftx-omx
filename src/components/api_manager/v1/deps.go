@@ -3,7 +3,7 @@
 package v1
 
 import (
-	"web_socket/src/components/data_manager"
+	"ftx-omx/src/components/data_manager"
 )
 
 type Dependencies struct {

@@ -3,6 +3,6 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 go_library(
     name = "crypto",
     srcs = ["crypto_utils.go"],
-    importpath = "web_socket/src/utils/crypto",
+    importpath = "ftx-omx/src/utils/crypto",
     visibility = ["//visibility:public"],
 )

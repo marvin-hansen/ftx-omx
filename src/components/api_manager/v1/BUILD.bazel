@@ -11,7 +11,7 @@ go_library(
         "workflow_api.go",
         "workflow_monitor.go",
     ],
-    importpath = "web_socket/src/components/api_manager/v1",
+    importpath = "ftx-omx/src/components/api_manager/v1",
     visibility = ["//visibility:public"],
     deps = [
         "//src/cfg",

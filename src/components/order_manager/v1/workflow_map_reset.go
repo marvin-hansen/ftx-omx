@@ -3,8 +3,8 @@
 package v1
 
 import (
+	"ftx-omx/src/types"
 	"github.com/go-numb/go-ftx/rest/private/orders"
-	"web_socket/src/types"
 )
 
 func (c *OrderManager) ResetAllOrderMap() {

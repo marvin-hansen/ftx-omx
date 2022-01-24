@@ -10,9 +10,9 @@ package v1
 import (
 	"context"
 	"fmt"
+	"ftx-omx/src/types"
+	"ftx-omx/src/utils/dbg"
 	"github.com/go-numb/go-ftx/realtime"
-	"web_socket/src/types"
-	"web_socket/src/utils/dbg"
 )
 
 func (c *ApiManager) StartMonitorApi(api types.Api) {

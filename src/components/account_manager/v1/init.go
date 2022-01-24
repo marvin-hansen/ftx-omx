@@ -3,7 +3,7 @@
 package v1
 
 import (
-	"web_socket/src/utils/dbg"
+	"ftx-omx/src/utils/dbg"
 )
 
 func (c *AccountManager) init() {

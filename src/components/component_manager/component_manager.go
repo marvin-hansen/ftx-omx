@@ -3,13 +3,13 @@
 package component_manager
 
 import (
-	"web_socket/src/clients/pgdb"
-	"web_socket/src/components/account_manager"
-	"web_socket/src/components/api_manager"
-	v1 "web_socket/src/components/component_manager/v1"
-	"web_socket/src/components/crypto_manager"
-	"web_socket/src/components/data_manager"
-	"web_socket/src/components/order_manager"
+	"ftx-omx/src/clients/pgdb"
+	"ftx-omx/src/components/account_manager"
+	"ftx-omx/src/components/api_manager"
+	v1 "ftx-omx/src/components/component_manager/v1"
+	"ftx-omx/src/components/crypto_manager"
+	"ftx-omx/src/components/data_manager"
+	"ftx-omx/src/components/order_manager"
 )
 
 type ComponentManager interface {

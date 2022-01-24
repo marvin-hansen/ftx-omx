@@ -1,4 +1,4 @@
-workspace(name = "web_socket")
+workspace(name = "ftx-omx")
 
 ################################################################################
 #  Bazel tools

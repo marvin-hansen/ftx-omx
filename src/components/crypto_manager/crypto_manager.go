@@ -2,7 +2,7 @@
 
 package crypto_manager
 
-import v1 "web_socket/src/components/crypto_manager/v1"
+import v1 "ftx-omx/src/components/crypto_manager/v1"
 
 type CryptoManager interface {
 	GenerateKey(length uint) (key string, ok bool)

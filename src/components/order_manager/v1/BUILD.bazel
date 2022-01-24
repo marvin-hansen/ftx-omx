@@ -18,7 +18,7 @@ go_library(
         "workflow_trailing_order.go",
         "workflow_trigger_order.go",
     ],
-    importpath = "web_socket/src/components/order_manager/v1",
+    importpath = "ftx-omx/src/components/order_manager/v1",
     visibility = ["//visibility:public"],
     deps = [
         "//src/cfg",

@@ -10,7 +10,7 @@ go_library(
         "dbg_structs.go",
         "dbg_utils.go",
     ],
-    importpath = "web_socket/src/utils/dbg",
+    importpath = "ftx-omx/src/utils/dbg",
     visibility = ["//visibility:public"],
     deps = ["@com_github_go_numb_go_ftx//rest/private/orders"],
 )

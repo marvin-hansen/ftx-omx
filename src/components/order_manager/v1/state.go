@@ -3,9 +3,9 @@
 package v1
 
 import (
+	"ftx-omx/src/types"
 	"github.com/go-numb/go-ftx/rest/private/orders"
 	"sync"
-	"web_socket/src/types"
 )
 
 type State struct {

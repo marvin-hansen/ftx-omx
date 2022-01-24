@@ -10,7 +10,7 @@ go_library(
         "state.go",
         "workflow.go",
     ],
-    importpath = "web_socket/src/components/account_manager/v1",
+    importpath = "ftx-omx/src/components/account_manager/v1",
     visibility = ["//visibility:public"],
     deps = [
         "//src/cfg",

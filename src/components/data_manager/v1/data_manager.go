@@ -3,8 +3,8 @@
 package v1
 
 import (
-	"web_socket/src/clients/pgdb"
-	"web_socket/src/components/crypto_manager"
+	"ftx-omx/src/clients/pgdb"
+	"ftx-omx/src/components/crypto_manager"
 )
 
 type DataManager struct {

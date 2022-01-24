@@ -6,7 +6,7 @@ go_library(
         "main.go",
         "main_utils.go",
     ],
-    importpath = "web_socket/src/cmd",
+    importpath = "ftx-omx/src/cmd",
     visibility = ["//visibility:private"],
     deps = [
         "//src/components/crypto_manager",

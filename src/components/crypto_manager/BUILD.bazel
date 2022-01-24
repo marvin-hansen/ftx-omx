@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 go_library(
     name = "crypto_manager",
     srcs = ["crypto_manager.go"],
-    importpath = "web_socket/src/components/crypto_manager",
+    importpath = "ftx-omx/src/components/crypto_manager",
     visibility = ["//visibility:public"],
     deps = ["//src/components/crypto_manager/v1:crypto_manager"],
 )

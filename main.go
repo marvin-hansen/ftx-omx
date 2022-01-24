@@ -3,8 +3,8 @@
 package main
 
 import (
-	"web_socket/src/cfg"
-	"web_socket/src/service"
+	"ftx-omx/src/cfg"
+	"ftx-omx/src/service"
 )
 
 func main() {

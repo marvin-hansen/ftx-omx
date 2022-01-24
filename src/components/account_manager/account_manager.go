@@ -3,9 +3,9 @@
 package account_manager
 
 import (
+	v1 "ftx-omx/src/components/account_manager/v1"
+	"ftx-omx/src/components/api_manager"
 	"github.com/go-numb/go-ftx/rest"
-	v1 "web_socket/src/components/account_manager/v1"
-	"web_socket/src/components/api_manager"
 )
 
 type AccountManager interface {

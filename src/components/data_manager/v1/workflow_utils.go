@@ -4,7 +4,7 @@ package v1
 
 import (
 	"errors"
-	"web_socket/src/types"
+	"ftx-omx/src/types"
 )
 
 func (c *DataManager) encryptApi(api types.Api) (encryptedApi types.Api, err error) {

@@ -3,7 +3,7 @@
 package cfg
 
 import (
-	t "web_socket/src/types"
+	t "ftx-omx/src/types"
 )
 
 // env sets DB host according to selected environment. Dev for localhost, Test for Docker.

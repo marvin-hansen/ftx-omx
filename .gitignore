@@ -18,7 +18,6 @@ notes/*.txt
 
 # manually compiled binaries, just in case
 main
-service
 
 # Emacs save files
 *~

@@ -3,8 +3,8 @@
 package v1
 
 import (
+	"ftx-omx/src/types"
 	"sync"
-	"web_socket/src/types"
 )
 
 type State struct {

@@ -3,8 +3,8 @@
 package v1
 
 import (
+	"ftx-omx/src/types"
 	"log"
-	"web_socket/src/types"
 )
 
 func (c *DataManager) StoreOrderFill(fill *types.OrderFill) (ok bool, msg string) {

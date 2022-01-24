@@ -3,8 +3,8 @@
 package v1
 
 import (
-	"web_socket/src/cfg"
-	"web_socket/src/utils/dbg"
+	"ftx-omx/src/cfg"
+	"ftx-omx/src/utils/dbg"
 )
 
 const (

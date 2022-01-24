@@ -3,11 +3,11 @@
 package v1
 
 import (
+	t "ftx-omx/src/types"
+	dbg2 "ftx-omx/src/utils/dbg"
 	"github.com/go-numb/go-ftx/rest"
 	"github.com/go-numb/go-ftx/rest/private/orders"
 	"strconv"
-	t "web_socket/src/types"
-	dbg2 "web_socket/src/utils/dbg"
 )
 
 func (c *OrderManager) PlaceTrailingStopOrder(clientID string, placeOrder *t.PlaceTrailingStopOrder) (orderID string, ok bool, msg string) {

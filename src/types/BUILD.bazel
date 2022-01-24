@@ -18,7 +18,7 @@ go_library(
         "price.go",
         "sync_map.go",
     ],
-    importpath = "web_socket/src/types",
+    importpath = "ftx-omx/src/types",
     visibility = ["//visibility:public"],
     deps = [
         "//src/clients/pgdb",

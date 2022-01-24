@@ -2,7 +2,7 @@
 
 package types
 
-import "web_socket/src/clients/pgdb"
+import "ftx-omx/src/clients/pgdb"
 
 type MainConfig struct {
 	Environment Env

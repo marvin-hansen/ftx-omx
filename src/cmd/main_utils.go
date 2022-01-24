@@ -5,8 +5,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"web_socket/src/components/crypto_manager"
-	"web_socket/src/types"
+	"ftx-omx/src/components/crypto_manager"
+	"ftx-omx/src/types"
 )
 
 func generateAuthKey(length uint) {

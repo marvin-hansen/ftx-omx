@@ -9,7 +9,7 @@ go_library(
         "init.go",
         "workflow.go",
     ],
-    importpath = "web_socket/src/components/component_manager/v1",
+    importpath = "ftx-omx/src/components/component_manager/v1",
     visibility = ["//visibility:public"],
     deps = [
         "//src/cfg",

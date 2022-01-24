@@ -8,7 +8,7 @@ go_library(
         "dbg_flags.go",
         "main_config.go",
     ],
-    importpath = "web_socket/src/cfg",
+    importpath = "ftx-omx/src/cfg",
     visibility = ["//visibility:public"],
     deps = [
         "//src/clients/pgdb",

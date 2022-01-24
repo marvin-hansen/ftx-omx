@@ -3,9 +3,9 @@
 package api_manager
 
 import (
-	v1 "web_socket/src/components/api_manager/v1"
-	"web_socket/src/components/data_manager"
-	"web_socket/src/types"
+	v1 "ftx-omx/src/components/api_manager/v1"
+	"ftx-omx/src/components/data_manager"
+	"ftx-omx/src/types"
 )
 
 type ApiManager interface {
