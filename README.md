@@ -179,10 +179,10 @@ make replace_docker  	Replaces running OMX image with latest published image. DB
 make reset_docker    	ALL DATA WILL BE LOST: Removes running OMX container, replaces it with latest local build, AND destroys & rebuilds DB.
 ```
 
-## Usage
+## API Guide
 
-* Account API
-* Order API
+* [Account API](docs/api/account_api_guide.md)
+* [order API](docs/api/order_api_guide.md)
 
 ## Known issues:
 
