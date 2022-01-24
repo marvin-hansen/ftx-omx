@@ -107,13 +107,13 @@ load(
 # Containers to pull required to build.
 ################################################################################
 # Digest must be updated in case of a repo change OR a push
-# docker pull gcr.io/future-309012/scratch:latest
+# docker pull hansenmarvin/scratch:latest
 container_pull(
     name = "scratch",
+    digest = "sha256:ba94ccf1a2844b835dd505201dde1b4f2629d96d187b57354639554b77c1c103",
+    registry = "docker.io",
+    repository = "hansenmarvin/scratch",
     # tag = "latest", # Avoid tag as much as possible to ascertain hermetic build
-    digest = "sha256:1bbcd9993f5dbfa4f9b84740a37c20d2f98c620caef54d305651abf763367bf2",
-    registry = "gcr.io",
-    repository = "future-309012/scratch",
 )
 
 ################################################################################

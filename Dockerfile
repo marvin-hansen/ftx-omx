@@ -14,8 +14,9 @@ ADD . .
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /build/service
 
 # STEP 3 Build image. Nobody user & SSH Certificates already build into the custom scratch image
+# https://hub.docker.com/repository/docker/hansenmarvin/scratch/tags
 ###########################
-FROM gcr.io/future-309012/scratch:latest
+FROM hansenmarvin/scratch:latest
 COPY --from=builder /build/service /service
 EXPOSE 9090
 USER nobody:nobody
