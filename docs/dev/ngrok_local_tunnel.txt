@@ -1,0 +1,20 @@
+
+ngrok
+https://ngrok.com/
+
+Ensure service is running on localhost port 80
+
+Terminal 1:
+
+ngrok http 80
+
+Open browser
+
+http://127.0.0.1:4040/inspect/http
+
+Terminal 2;
+
+send requests to ngronk url that forward to localhost i.e.
+
+curl http://062c-103-225-149-189.ngrok.io/status
+

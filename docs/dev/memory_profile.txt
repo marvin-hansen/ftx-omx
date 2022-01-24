@@ -1,0 +1,45 @@
+
+Article:
+https://dev.to/googlecloud/finding-and-fixing-memory-leaks-in-go-1k1h
+
+Usage:
+
+1) Set dbg_flags / DbgMemory = true
+
+2) Start service
+
+3) Send requests
+
+// ENABLE API
+curl -X POST http://localhost/api/on -H "auth: a9f4fd720fb842dc66a3adc9f44d362b"
+
+// SEND some random request
+curl -X POST -H "auth: a9f4fd720fb842dc66a3adc9f44d362b" -H 'Content-Type: application/json' -d '{"api_id": "6tgrfg8wc2v8", "market": "ETHUSD", "leverage": 0}'  http://localhost/api/resetleverage
+
+4) Download heap memory proile
+
+ curl http://localhost/debug/pprof/heap > heap.0.pprof
+
+ 5) Analyze
+
+ go tool pprof heap.0.pprof
+ > top10
+
+ Sending 50 FTX requests (Respect rate limit):
+
+ time for i in {1..10}; do
+ curl -X POST -H "auth: a9f4fd720fb842dc66a3adc9f44d362b" -H 'Content-Type: application/json' -d '{"api_id": "6tgrfg8wc2v8", "market": "ETHUSD", "leverage": 0}'  http://localhost/api/resetleverage
+ echo " -- $i"
+ done
+
+  Sending 10000 internal requests (no rate limit & 4 parallel req):
+
+     time for i in {1..10000}; do
+         curl --parallel --parallel-immediate --parallel-max 4 http://localhost/
+      echo " -- $i"
+     done
+
+ex
+
+   // for linux using gnu parallel
+   time seq 10000 | parallel --max-args 0 --jobs 8 curl http://localhost/
