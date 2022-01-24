@@ -5,7 +5,17 @@ constructs the order, and sends it to the configured FTX account. OMX supports m
 that means you can add multiple FTX accounts, and the OMX will route the order to the configured exchange account.
 Notice, OMX only supports FTX exchange, but it does so with an expanded features otherwise unavailable.
 
-## Why OMX?
+# Table of Contents
+
+1. [Why OMX?](#para1)
+2. [Features](#para2)
+3. [Order handling](#para3)
+4. [Supported platforms](#para4)
+5. [Order routing](#para5)
+6. [Supported platforms](#para6)
+7. [Build Requirements](#para7)
+
+## <a name="para1"/> Why OMX?
 
 After having searched and tried a lot, I could not find a proper order management & execution service for FTX exchange
 that allows me to send limit orders straight into the order book and that is actually open source. Therefore, I wrote
@@ -14,7 +24,7 @@ one.
 When you want your orders routed the way you want at the conditions you want and on the terms you want, you actually
 need an OMX that manages your orders and executions.
 
-## Features
+## Features <a name="para2"></a>
 
 OMX provides a REST API with handful of features beyond the standard FTX API.
 
@@ -40,7 +50,7 @@ OMX does NOT provide:
 Adding these functions would be part of a more comprehensive Execution Management System (EMX), which was and still
 remains outside the scope of this project.
 
-## Order handling
+## <a name="para3"/>  Order handling
 
 1) OMX does *not* cancel any unfilled order. Tracking order state is the sole responsibility of the issuing system. (
    Thus no OCO)
@@ -49,7 +59,7 @@ remains outside the scope of this project.
 4) OMX, for the time being, only allows single positions on any given account
 5) OMX only supports limit orders for the time being, but market orders may be added in the future
 
-## Order routing
+## Order routing  <a name="para4"></a>
 
 #### Conventional order routing
 
@@ -146,7 +156,7 @@ order book placement regardless of latency induced delays.
 
 More dynamic order book pricing can be added by modifying the workflow in the orderManager component.
 
-## Supported platforms
+## Supported platforms  <a name="para5"></a>
 
 Supported:
 
@@ -160,7 +170,7 @@ Untested platforms:
 * Windows 11 (Should technically exactly as Win 10 when using WSL, but was never tested)
 * Windows on Arm (Anyone out there with a Win Arm64 device who is willing to do a test build?)
 
-## Requirements
+## Build Requirements  <a name="para6"></a>
 
 * Bash
 * clang 7 or higher (required for Bazel & CGO)
@@ -223,7 +233,7 @@ which bazel
 /usr/local/bin/bazel
 ```
 
-## Getting started
+## Getting started  <a name="para7"></a>
 
 Setup requires three steps.
 
@@ -273,7 +283,7 @@ Important details:
 * However, when changing or losing the master key, all stored data are lost because no account can be decrypted anymore.
 * When resetting the entire database, all data are lost, obviously.
 
-## Make commands
+## Make commands <a name="para8"></a>
 
 ```bash
 Setup:
@@ -296,12 +306,12 @@ make replace_docker  	Replaces running OMX image with latest published image. DB
 make reset_docker    	ALL DATA WILL BE LOST: Removes running OMX container, replaces it with latest local build, AND destroys & rebuilds DB.
 ```
 
-## API Guide
+## API Guide <a name="para8"></a>
 
 * [Account API](docs/api/account_api_guide.md)
 * [Order API](docs/api/order_api_guide.md)
 
-## Known issues:
+## Known issues: <a name="para9"></a>
 
 ### Order API needs documentation
 
@@ -341,16 +351,14 @@ Solution:
 * Set 'const env = t.Prod' to 'const env = t.Dev'
 * Rebuild & re-run container
 
-## Development
+## Development <a name="para10"></a>
 
 * See ngrok guide for local request inspection
 * See standard component guide for overall development style & best practices
 * See CIRA guide for even more details on the used component model
 
-Licence:
-
+## Licence: <a name="para11"></a>
 * All content under MIT Licence.
 
-Author:
-
+## Author(s): <a name="para12"></a>
 * Marvin Hansen 
