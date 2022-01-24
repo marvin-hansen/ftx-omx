@@ -182,9 +182,14 @@ make reset_docker    	ALL DATA WILL BE LOST: Removes running OMX container, repl
 ## API Guide
 
 * [Account API](docs/api/account_api_guide.md)
-* [order API](docs/api/order_api_guide.md)
+* [Order API](docs/api/order_api_guide.md)
 
 ## Known issues:
+
+### Order API needs documentation
+
+True. It's on my todo list. In the meantime, look at the curl examples for each API function in
+src/service/v1/http_handlers_order_*. Feel free to contribute documentation.
 
 ### Docker warning on Apple/M1 macs
 
