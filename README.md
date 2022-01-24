@@ -22,7 +22,8 @@ Notice, OMX only supports FTX exchange, but it does so with an expanded features
 
 * [Account API Guide](docs/api/account_api_guide.md)
 * [Order API Guide](docs/api/order_api_guide.md)
-* [Component guide](docs/dev/component_model.md)
+* [Automatic Dependency Management](docs/dev/go_bazel_depenencies.md)
+* [Standard Component guide](docs/dev/component_model.md)
 
 ## <a name="para1"/> Why OMX?
 
@@ -243,14 +244,37 @@ Solution:
 * Set 'const env = t.Prod' to 'const env = t.Dev'
 * Rebuild & re-run container
 
-## <a name="para8"/>  Development
+## <a name="para8"/> Development
 
-* See ngrok guide for local request inspection
-* See standard component guide for overall development style & best practices
-* See CIRA guide for even more details on the used component model
+*Development Documentation:*
+
+* [Account API Guide](docs/api/account_api_guide.md)
+* [Order API Guide](docs/api/order_api_guide.md)
+* [Automatic Dependency Management](docs/dev/go_bazel_depenencies.md)
+* [Standard Component guide](docs/dev/component_model.md)
+
+*Tooling & best practices:*
+
+* See docs/dev/ngrok guide for local request inspection
+* See docs/dev/memory profiling for setting up runtime memory profiling
+* See CIRA guide for more details on the used component model
+
+*Bug reporting:*
+
+* All bugs & issues are tracked in the issue tracker
+* Please add description, test case, or shell script to reproduce a bug
+* Indicate in the issue headline if it's a bug, a question, or something else your opening
+
+*Pull requests:*
+
+* Please open an issue before doing a PR
+* Bug fixes & improvements should pass as a normal make build & rebuild
+* If applicable, add some tests or similar
+* Ensure to link the PR to the issue your resolving
 
 ## <a name="para9"/>  Licence:
-* All content under MIT Licence.
+
+* All content licenced under MIT Licence.
 
 ## <a name="para10"/>  Author(s):
 
