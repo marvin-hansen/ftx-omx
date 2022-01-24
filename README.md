@@ -1,9 +1,12 @@
 # OMX Order Management & Execution for FTX.com
 
-OMX is an open source order management & execution system for FTX crypto exchange. It takes an order specification,
-constructs the order, and sends it to the configured FTX account. OMX supports multi-tenant order routing by default
-that means you can add multiple FTX accounts, and the OMX will route the order to the configured exchange account.
-Notice, OMX only supports FTX exchange, but it does so with an expanded features otherwise unavailable.
+## <a name="para0"/> About OMX
+
+OMX is an open source REST API and order management & execution system for FTX crypto exchange. It takes an order
+specification, constructs the order, and sends it to the configured FTX account. OMX supports multi-tenant order routing
+by default that means you can add multiple FTX accounts, and the OMX will route the order to the configured exchange
+account. Notice, OMX only supports FTX exchange, but it does so with an expanded features otherwise unavailable in the
+standard FTX API.
 
 # Table of Contents
 
@@ -22,7 +25,8 @@ Notice, OMX only supports FTX exchange, but it does so with an expanded features
 
 * [Account API Guide](docs/api/account_api_guide.md)
 * [Order API Guide](docs/api/order_api_guide.md)
-* [Automatic Dependency Management](docs/dev/go_bazel_depenencies.md)
+* [OMX Order Handling Concept Guide](docs/api/order_handling.md)
+* [Automatic Go Dependency & Build file Management](docs/dev/go_bazel_depenencies.md)
 * [Standard Component guide](docs/dev/component_model.md)
 
 ## <a name="para1"/> Why OMX?

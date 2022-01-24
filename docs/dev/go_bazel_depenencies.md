@@ -7,7 +7,7 @@
 
 2. Sync go.mod with GoLAnd IDE using context menu. Alternatively, update go.mod manually
 
-3. Run a proper rebuild
+3. Run a rebuild
    `
    make rebuild
    `
@@ -15,7 +15,7 @@
 Rebuild does the following
 
 * syncs go.mod with Bazel WORKSPACE,
-* Generates new or update existing build files
+* Generates new or updates existing build files as detected by Bazel & Gazelle
 * Checks for breaking changes
 * Runs a build
 
