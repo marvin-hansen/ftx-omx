@@ -1,0 +1,43 @@
+.idea
+.idea/*
+
+.classpath
+.settings/
+.groovy/
+.ijwb/
+
+bin/
+target/
+
+*.pyc
+Logs/*
+*.local
+
+notes/*
+notes/*.txt
+
+# manually compiled binaries, just in case
+main
+service
+
+# Emacs save files
+*~
+\#*\#
+.\#*
+
+# Vim-related files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+
+# Crash & log files
+crash.log
+output.log
+
+# Bazel stuff
+bazel-out
+bazel-out/*.*
+dist
+dist/*.*
