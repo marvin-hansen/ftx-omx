@@ -15,7 +15,7 @@ const (
 )
 
 func (s OrderBookPriceType) String() string {
-	types := [...]string{"LargestOrderSizePrice", "SmallestOrderSizePrice", "FirstOrderBookPrice", "LastOrderBookPrice", "LowestPrice", "HighestPrice"}
+	types := [...]string{"LargestOrderSizePrice", "SmallestOrderSizePrice", "FirstOrderBookPrice", "MidOrderBookPrice", "LastOrderBookPrice", "LowestPrice", "HighestPrice"}
 	x := string(s)
 	for _, v := range types {
 		if v == x {
