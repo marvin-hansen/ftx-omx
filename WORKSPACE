@@ -12,35 +12,22 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 ################################################################################
 #  Go rules
 ################################################################################
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
 http_archive(
     name = "io_bazel_rules_go",
-    sha256 = "2b1641428dff9018f9e85c0384f03ec6c10660d935b750e3fa1492a281a53b0f",
+    sha256 = "d6b2513456fe2229811da7eb67a444be7785f5323c6708b38d851d2b51e54d83",
     urls = [
-        "https://mirror.bazel.build/github.com/bazelbuild/rules_go/releases/download/v0.29.0/rules_go-v0.29.0.zip",
-        "https://github.com/bazelbuild/rules_go/releases/download/v0.29.0/rules_go-v0.29.0.zip",
+        "https://mirror.bazel.build/github.com/bazelbuild/rules_go/releases/download/v0.30.0/rules_go-v0.30.0.zip",
+        "https://github.com/bazelbuild/rules_go/releases/download/v0.30.0/rules_go-v0.30.0.zip",
     ],
 )
 
-load("@io_bazel_rules_go//go:deps.bzl", "go_download_sdk", "go_register_toolchains", "go_rules_dependencies")
+load("@io_bazel_rules_go//go:deps.bzl", "go_register_toolchains", "go_rules_dependencies")
 
 go_rules_dependencies()
 
-# Download beta SDK
-# https://toscode.gitee.com/hui2hui/rules_go/blob/master/README.rst#how-do-i-test-a-beta-version-of-the-go-sdk
-# SDK Name & Hash:
-# https://go.dev/dl/#go1.18beta1
-go_download_sdk(
-    name = "go_sdk",
-    sdks = {
-        "darwin_arm64": ("go1.18beta1.darwin-arm64.tar.gz", "09b7718f2354acb9826eef27f8257ac41c77df6389b14e91af09b90f79f200e8"),
-        "linux_amd64": ("go1.18beta1.linux-amd64.tar.gz", "128f72c5c22640085e4187cd1b540c587cf8fb280f941519bd2d1ae9fdab4f37"),
-    },
-)
-
-go_register_toolchains()
-
-# rules_go only supports official releases of the Go SDK.
-#go_register_toolchains(version = "1.17.1")
+go_register_toolchains(version = "1.18")
 
 ################################################################################
 #  gazelle
@@ -148,8 +135,8 @@ go_repository(
 go_repository(
     name = "com_github_andybalholm_brotli",
     importpath = "github.com/andybalholm/brotli",
-    sum = "h1:7UCwP93aiSfvWpapti8g88vVVGp2qqtGyePsSuDafo4=",
-    version = "v1.0.0",
+    sum = "h1:V7DdXeJtZscaqfNuAdSRuRFzuiKlHSC/Zh3zl9qY3JY=",
+    version = "v1.0.4",
 )
 
 go_repository(
@@ -232,8 +219,8 @@ go_repository(
 go_repository(
     name = "com_github_go_numb_go_ftx",
     importpath = "github.com/go-numb/go-ftx",
-    sum = "h1:uv7EVkoWM00kUKufIQk0KDzn5zsM+ARxtV1yB0DZ5TE=",
-    version = "v0.0.0-20211208060907-82614a9fd25b",
+    sum = "h1:9NFsY+GhdM9wyhURcyDvfiUFHwKiOKZCTq3mCmE3Kdw=",
+    version = "v0.0.0-20220323053743-f792275537ff",
 )
 
 go_repository(
@@ -379,8 +366,8 @@ go_repository(
 go_repository(
     name = "com_github_klauspost_compress",
     importpath = "github.com/klauspost/compress",
-    sum = "h1:7rix8v8GpI3ZBb0nSozFRgbtXKv+hOe+qfEpZqybrAg=",
-    version = "v1.10.7",
+    sum = "h1:xqfchp4whNFxn5A4XFyyYtitiWI8Hy5EW59jEwcyL6U=",
+    version = "v1.15.0",
 )
 
 go_repository(
@@ -568,15 +555,15 @@ go_repository(
 go_repository(
     name = "com_github_valyala_fasthttp",
     importpath = "github.com/valyala/fasthttp",
-    sum = "h1:fJjaQ7cXdaSF9vDBujlHLDGj7AgoMTMIXvICeePzYbU=",
-    version = "v1.21.0",
+    sum = "h1:d3AAQJ2DRcxJYHm7OXNXtXt2as1vMDfxeIcFvhmGGm4=",
+    version = "v1.34.0",
 )
 
 go_repository(
     name = "com_github_valyala_tcplisten",
     importpath = "github.com/valyala/tcplisten",
-    sum = "h1:0R4NLDRDZX6JcmhJgXi5E4b8Wg84ihbmUKp/GvSPEzc=",
-    version = "v0.0.0-20161114210144-ceec8f93295a",
+    sum = "h1:rBHj/Xf+E1tRGZyWIWwJDiRY0zc1Js+CV5DqwacVSA8=",
+    version = "v1.0.0",
 )
 
 go_repository(
@@ -694,8 +681,8 @@ go_repository(
 go_repository(
     name = "org_golang_x_crypto",
     importpath = "golang.org/x/crypto",
-    sum = "h1:7I4JAnoQBe7ZtJcBaYHi5UtiO8tQHbUSXxL+pnGRANg=",
-    version = "v0.0.0-20210921155107-089bfa567519",
+    sum = "h1:f+lwQ+GtmgoY+A2YaQxlSOnDjXcQ7ZRLWOHbC6HtRqE=",
+    version = "v0.0.0-20220214200702-86341886e292",
 )
 
 go_repository(
@@ -715,8 +702,8 @@ go_repository(
 go_repository(
     name = "org_golang_x_net",
     importpath = "golang.org/x/net",
-    sum = "h1:qWPm9rbaAMKs8Bq/9LRpbMqxWRVUAQwMI9fVrssnTfw=",
-    version = "v0.0.0-20210226172049-e18ecbb05110",
+    sum = "h1:oA4XRj0qtSt8Yo1Zms0CUlsT3KG69V2UGQWPBxujDmc=",
+    version = "v0.0.0-20220225172249-27dd8689420f",
 )
 
 go_repository(
@@ -736,22 +723,22 @@ go_repository(
 go_repository(
     name = "org_golang_x_sys",
     importpath = "golang.org/x/sys",
-    sum = "h1:c20P3CcPbopVp2f7099WLOqSNKURf30Z0uq66HpijZY=",
-    version = "v0.0.0-20210923061019-b8560ed6a9b7",
+    sum = "h1:nhht2DYV/Sn3qOayu8lM+cU1ii9sTLUeBQwQQfUHtrs=",
+    version = "v0.0.0-20220227234510-4e6760a101f9",
 )
 
 go_repository(
     name = "org_golang_x_term",
     importpath = "golang.org/x/term",
-    sum = "h1:v+OssWQX+hTHEmOBgwxdZxK4zHq3yOs8F9J7mk0PY8E=",
-    version = "v0.0.0-20201126162022-7de9c90e9dd1",
+    sum = "h1:JGgROgKl9N8DuW20oFS5gxc+lE67/N3FcwmBPMe7ArY=",
+    version = "v0.0.0-20210927222741-03fcf44c2211",
 )
 
 go_repository(
     name = "org_golang_x_text",
     importpath = "golang.org/x/text",
-    sum = "h1:cokOdA+Jmi5PJGXLlLllQSgYigAEfHXJAERHVMaCc2k=",
-    version = "v0.3.3",
+    sum = "h1:olpwvP2KacW1ZWvsR7uQhoyTYvKAupfQrRGBFM352Gk=",
+    version = "v0.3.7",
 )
 
 go_repository(
