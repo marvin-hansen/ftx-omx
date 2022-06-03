@@ -25,7 +25,7 @@ filegroup(
 )
 
 filegroup(
-    name = "build_local",
+    name = "build",
     srcs = [
         "//:server_noarch",
     ],

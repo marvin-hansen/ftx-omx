@@ -18,6 +18,7 @@ help:
 	@echo 'Dev: '
 	@echo '    make build   		Builds the code base incrementally (fast). Use for coding.'
 	@echo '    make rebuild   		Rebuilds all dependencies & the code base (slow). Use after go mod changes. '
+	@echo '    make deps			Update all external dependencies & rebuilds entire project (slow) '
 	@echo '    make run   			Runs the default target defined in dev/run script. Use to run default binary.'
 	@echo ' '
 	@echo 'Docker: '
@@ -66,6 +67,11 @@ build:
 .PHONY: rebuild
 rebuild:
 	@source scripts/dev/rebuild.sh
+
+.PHONY: deps
+deps:
+	@source scripts/dev/update_deps.sh
+
 
 .PHONY: run
 run:
