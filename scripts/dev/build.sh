@@ -6,4 +6,4 @@ set -o nounset
 set -o pipefail
 
 # Build all sources
-bazel build //:build_local
+bazel build //:build

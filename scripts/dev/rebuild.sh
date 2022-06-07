@@ -14,4 +14,4 @@ bazel run //:gazelle -- update-repos -from_file=go.mod
 bazel run //:gazelle
 
 # Build all sources
-bazel build //:build_local
+bazel build //:build

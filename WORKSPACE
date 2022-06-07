@@ -366,8 +366,8 @@ go_repository(
 go_repository(
     name = "com_github_klauspost_compress",
     importpath = "github.com/klauspost/compress",
-    sum = "h1:qyCLMz2JCrKADihKOh9FxnW3houKeNsp2h5OEz0QSEA=",
-    version = "v1.15.5",
+    sum = "h1:6D9PcO8QWu0JyaQ2zUMmu16T1T+zjjEpP91guRsvDfY=",
+    version = "v1.15.6",
 )
 
 go_repository(
@@ -702,8 +702,8 @@ go_repository(
 go_repository(
     name = "org_golang_x_net",
     importpath = "golang.org/x/net",
-    sum = "h1:MYimHLfoXEpOhqd/zgoA/uoXzHB86AEky4LAx5ij9xA=",
-    version = "v0.0.0-20220531201128-c960675eff93",
+    sum = "h1:4SFsTMi4UahlKoloni7L4eYzhFRifURQLw+yv0QDCx8=",
+    version = "v0.0.0-20220607020251-c690dde0001d",
 )
 
 go_repository(
